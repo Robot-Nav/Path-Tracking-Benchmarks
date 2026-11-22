@@ -1,0 +1,15 @@
+<launch>
+  <arg name="rviz" default="false"/>
+  <arg name="plan_topic" default="/plan"/>
+  <arg name="odom_topic" default="/odom1"/>
+  <arg name="cmd_vel_topic" default="/cmd_vel"/>
+
+  <node pkg="mpc_controller" type="mpc_controller_node" name="mpc_controller" output="screen">
+    <rosparam file="$(find mpc_controller)/config/mpc_controller_params.yaml" command="load"/>
+    <remap from="/plan" to="$(arg plan_topic)"/>
+    <remap from="/odom1" to="$(arg odom_topic)"/>
+    <remap from="/cmd_vel" to="$(arg cmd_vel_topic)"/>
+  </node>
+
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="rviz" output="screen"/>
+</launch>

@@ -1,0 +1,27 @@
+# PID Controller (Kinematic Model Inverse) Parameters
+# =======================================================
+
+control_frequency: 20.0       # Control frequency [Hz]
+
+# Velocity limits
+max_v: 0.6                    # common benchmark cruise velocity [m/s]
+min_v: 0.0                    # min linear velocity [m/s]
+max_w: 1.0                    # physical yaw-rate limit [rad/s]
+min_turning_radius: 0.5       # minimum turning radius [m]
+
+# PID gains
+k: 1.0                        # proportional gain for position error
+L: 0.500                      # control-point offset [m]
+
+# Lookahead
+lookahead_dist: 0.6           # lookahead distance [m]
+
+# Goal tolerance
+goal_dist_tolerance: 0.15     # distance tolerance to goal [m]
+
+# Prune
+prune_distance: 5.0           # local window length [m]
+
+# Frame
+planning_frame: "map"
+strict_frame_check: true

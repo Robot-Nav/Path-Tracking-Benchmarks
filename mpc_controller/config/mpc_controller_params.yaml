@@ -1,0 +1,13 @@
+# MPC Controller Parameters
+control_frequency: 20.0
+max_v: 0.6
+min_v: 0.0
+max_w: 1.0
+min_turning_radius: 0.5
+acc_v: 1.2
+acc_w: 2.5
+lookahead_dist: 0.6
+horizon: 4
+goal_dist_tolerance: 0.15
+prune_distance: 5.0
+planning_frame: "map"

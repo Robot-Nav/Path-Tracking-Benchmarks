@@ -1,0 +1,12 @@
+<launch>
+  <arg name="config" default="$(find open_loop_qp_controller)/config/global_open_loop_qp.yaml"/>
+  <arg name="plan_topic" default="/plan"/>
+  <arg name="cmd_vel_topic" default="/cmd_vel"/>
+
+  <node pkg="open_loop_qp_controller" type="global_open_loop_qp_controller.py"
+        name="open_loop_qp_controller" output="screen">
+    <rosparam file="$(arg config)" command="load"/>
+    <param name="plan_topic" value="$(arg plan_topic)"/>
+    <param name="cmd_vel_topic" value="$(arg cmd_vel_topic)"/>
+  </node>
+</launch>

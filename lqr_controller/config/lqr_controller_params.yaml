@@ -1,0 +1,32 @@
+# LQR Controller Parameters
+# ==========================
+
+control_frequency: 20.0       # Control frequency [Hz]
+
+# Velocity limits
+max_v: 0.6                    # common benchmark cruise velocity [m/s]
+min_v: 0.0                    # min linear velocity [m/s]
+max_w: 1.0                    # physical yaw-rate limit [rad/s]
+min_turning_radius: 0.5       # minimum turning radius [m]
+
+# Lookahead
+lookahead_dist: 0.6           # lookahead distance [m]
+
+# LQR weight matrices
+# Q: penalizes state error [x, y, theta]
+Q_diag: [1.0, 1.0, 0.5]
+# R: penalizes control effort [v, w]
+R_diag: [0.1, 0.1]
+
+# Riccati iteration
+max_riccati_iter: 100
+riccati_eps: 0.0001
+
+# Goal tolerance
+goal_dist_tolerance: 0.15
+
+# Prune
+prune_distance: 5.0
+
+# Frame
+planning_frame: "map"

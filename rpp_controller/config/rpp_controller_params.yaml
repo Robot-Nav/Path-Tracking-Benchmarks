@@ -1,0 +1,39 @@
+# RPP Controller (Regulated Pure Pursuit) Parameters
+# ==================================================
+
+control_frequency: 20.0
+
+max_v: 0.6
+min_v: 0.0
+max_w: 1.0
+min_turning_radius: 0.5
+
+# Dynamic lookahead
+lookahead_time: 1.5
+min_lookahead_dist: 0.3
+max_lookahead_dist: 0.9
+
+# Curvature constraint
+regulated_min_radius: 0.5
+
+# Obstacle constraint (heuristic from scan)
+inflation_cost_factor: 3.0
+scaling_dist: 0.6
+scaling_gain: 1.0
+
+# Approach constraint
+approach_dist: 0.8
+approach_min_v: 0.1
+
+# Scan-based obstacle
+use_scan_obstacle: false
+robot_radius: 0.2
+
+# Goal tolerance
+goal_dist_tolerance: 0.15
+
+# Prune
+prune_distance: 5.0
+
+# Frame
+planning_frame: "map"

@@ -1,0 +1,17 @@
+# Dynamic-window pure path tracking parameters
+control_frequency: 20.0
+max_v: 0.6
+min_v: 0.0
+max_w: 1.0
+min_turning_radius: 0.5
+acc_v: 1.2
+acc_w: 2.5
+lookahead: 0.6
+prediction_time: 1.0
+linear_samples: 15
+angular_samples: 21
+goal_dist_tolerance: 0.15
+prune_distance: 5.0
+odom_timeout: 0.30
+planning_frame: "map"
+odom_topic: "/odom1"

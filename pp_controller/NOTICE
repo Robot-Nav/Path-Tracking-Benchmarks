@@ -1,0 +1,9 @@
+This ROS 1 package adapts Robot-Nav/PP_Controller.
+Upstream source and license: https://github.com/Robot-Nav/PP_Controller
+
+The standalone C++ control law was adapted to this package's path, pose and
+velocity types. The ROS 1 node integrates Path, Odometry and Twist messages,
+and applies a minimum-turning-radius limit. The packaging, launch setup and
+license labeling were updated for this distribution on 2026-11-22.
+
+The applicable license for this package is GNU GPL version 3. See LICENSE.

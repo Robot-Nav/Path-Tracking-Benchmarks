@@ -1,0 +1,37 @@
+# PP Controller (Graceful Pure Pursuit) Parameters
+# ====================================================
+
+# Control frequency [Hz]
+control_frequency: 20.0
+
+# Velocity limits
+max_v: 0.6      # common benchmark cruise velocity [m/s]
+min_v: 0.05     # min linear velocity [m/s]
+max_w: 1.0      # physical yaw-rate limit [rad/s]
+min_turning_radius: 0.5
+
+# Lookahead
+lookahead_dist: 0.6      # fixed lookahead distance [m]
+
+# Curvature control law parameters (SmoothControlLaw)
+# curvature = -(k_delta*(delta-atan(-k_phi*phi)) + (1+k_phi/(1+(k_phi*phi)^2))*sin(delta)) / r
+k_phi: 2.0     # phi gain (heading error to line-of-sight)
+k_delta: 1.0   # delta gain (current heading error)
+beta: 0.4      # curvature-based speed scaling coefficient
+lambda: 2.0    # curvature-based speed scaling exponent
+
+# Slowdown behavior near goal
+slowdown_radius: 1.5    # distance from goal where slowdown begins [m]
+
+# Goal tolerance
+goal_dist_tolerance: 0.15       # distance tolerance to goal [m]
+goal_yaw_tolerance: 0.2        # yaw tolerance to goal [rad]
+
+# Planning frame
+planning_frame: "map"
+
+# Prune parameters
+prune_distance: 5.0    # max lookahead distance along path for local window [m]
+
+# Strict frame ID check
+strict_frame_check: true
