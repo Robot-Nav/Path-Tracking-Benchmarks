@@ -1,4 +1,4 @@
-# Path Tracking Benchmarks
+# 路径跟踪基准
 
 [English](README.md) · [中文项目分析](docs/project-analysis.zh-CN.md)
 
