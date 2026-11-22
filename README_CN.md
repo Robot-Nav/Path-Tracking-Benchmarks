@@ -1,4 +1,4 @@
-# 路径跟踪基准
+# 路径跟踪基准对比
 
 [English](README.md) · [中文项目分析](docs/project-analysis.zh-CN.md)
 
