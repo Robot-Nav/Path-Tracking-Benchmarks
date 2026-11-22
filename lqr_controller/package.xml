@@ -3,7 +3,7 @@
   <name>lqr_controller</name>
   <version>0.1.0</version>
   <description>ROS 1 controller for linear quadratic regulator path tracking.</description>
-  <maintainer email="zjs@example.com">zjs</maintainer>
+  <maintainer email="186013147+Robot-Nav@users.noreply.github.com">Robot-Nav</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
